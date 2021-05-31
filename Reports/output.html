@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.2 (Python 3.7.3 on win32)" generated="20210526 16:23:45.577" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="E:\Anania\INNOVATILY\vmsdevautomation\Tests">
+<kw name="BeforeEachTestSuite" type="SETUP">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Before</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210526 16:23:45.877" endtime="20210526 16:23:45.878"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Before started</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210526 16:23:45.878" level="INFO">Before started</msg>
+<status status="PASS" starttime="20210526 16:23:45.878" endtime="20210526 16:23:45.878"/>
+</kw>
+<status status="PASS" starttime="20210526 16:23:45.877" endtime="20210526 16:23:45.878"/>
+</kw>
+<suite id="s1-s1" name="LoginPortal" source="E:\Anania\INNOVATILY\vmsdevautomation\Tests\LoginPortal.robot">
+<test id="s1-s1-t1" name="[Setup]">
+<kw name="LoginPortal" library="LoginPortal">
+<kw name="OpenPage" library="LoginPortal">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20210526 16:23:45.900" level="INFO">Opening browser 'chrome' to base url 'http://vmsdev.innovatily.com/admin'.</msg>
+<status status="PASS" starttime="20210526 16:23:45.900" endtime="20210526 16:23:52.497"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210526 16:23:52.498" endtime="20210526 16:23:52.640"/>
+</kw>
+<status status="PASS" starttime="20210526 16:23:45.899" endtime="20210526 16:23:52.641"/>
+</kw>
+<kw name="Login" library="LoginPortal">
+<arg>arec</arg>
+<arg>test</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210526 16:23:52.641" endtime="20210526 16:23:52.706"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210526 16:23:52.707" level="INFO">Typing text 'arec' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20210526 16:23:52.707" endtime="20210526 16:23:52.814"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210526 16:23:52.815" level="INFO">Typing text 'test' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20210526 16:23:52.814" endtime="20210526 16:23:52.944"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[@value="Log In"]</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210526 16:23:52.945" level="INFO">Clicking element 'xpath://button[@value="Log In"]'.</msg>
+<status status="PASS" starttime="20210526 16:23:52.945" endtime="20210526 16:23:53.026"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Visitor Overview</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20210526 16:23:53.027" endtime="20210526 16:23:54.163"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>.//Snapshots/tc1-1.png</arg>
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20210526 16:23:54.393" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Snapshots/tc1-1.png"&gt;&lt;img src="Snapshots/tc1-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210526 16:23:54.163" endtime="20210526 16:23:54.394"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${PageTitle}</var>
+<doc>Returns the title of current page.</doc>
+<msg timestamp="20210526 16:23:54.421" level="INFO">${PageTitle} = Login: KLA - VMS</msg>
+<status status="PASS" starttime="20210526 16:23:54.394" endtime="20210526 16:23:54.421"/>
+</kw>
+<kw name="if( ${PageTitle} == 'Test Title&quot;):">
+<msg timestamp="20210526 16:23:54.427" level="FAIL">No keyword with name 'if( ${PageTitle} == 'Test Title"):' found.</msg>
+<status status="FAIL" starttime="20210526 16:23:54.426" endtime="20210526 16:23:54.427"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test Fail</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20210526 16:23:54.427" endtime="20210526 16:23:54.427"/>
+</kw>
+<status status="FAIL" starttime="20210526 16:23:52.641" endtime="20210526 16:23:54.427"/>
+</kw>
+<status status="FAIL" starttime="20210526 16:23:45.899" endtime="20210526 16:23:54.427"/>
+</kw>
+<tag>Regression</tag>
+<tag>Sanity</tag>
+<status status="FAIL" starttime="20210526 16:23:45.898" endtime="20210526 16:23:54.428">No keyword with name 'if( ${PageTitle} == 'Test Title"):' found.</status>
+</test>
+<test id="s1-s1-t2" name="NewVisitor">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://ul[@id='accordionSidebar']/li[2]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210526 16:23:54.432" level="INFO">Clicking link 'xpath://ul[@id='accordionSidebar']/li[2]/a'.</msg>
+<status status="PASS" starttime="20210526 16:23:54.432" endtime="20210526 16:23:54.607"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Visitor Details Capture</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20210526 16:23:54.608" endtime="20210526 16:23:54.631"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[contains(.,'New Visitor')]</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210526 16:23:54.633" level="INFO">Clicking element 'xpath://button[contains(.,'New Visitor')]'.</msg>
+<status status="PASS" starttime="20210526 16:23:54.632" endtime="20210526 16:23:54.863"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>.//Snapshots/tc1-2.png</arg>
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20210526 16:23:55.184" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Snapshots/tc1-2.png"&gt;&lt;img src="Snapshots/tc1-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210526 16:23:54.864" endtime="20210526 16:23:55.184"/>
+</kw>
+<kw name="Scrollto" library="LoginPortal">
+<arg>(//input[@type='text'])[26]</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2000)</arg>
+<doc>Executes the given JavaScript code.</doc>
+<msg timestamp="20210526 16:23:55.186" level="INFO">Executing JavaScript:
+window.scrollTo(0,2000)</msg>
+<status status="PASS" starttime="20210526 16:23:55.186" endtime="20210526 16:23:55.199"/>
+</kw>
+<status status="PASS" starttime="20210526 16:23:55.185" endtime="20210526 16:23:55.200"/>
+</kw>
+<tag>Regression</tag>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20210526 16:23:54.431" endtime="20210526 16:23:55.200"/>
+</test>
+<test id="s1-s1-t3" name="Profile">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[@id='userDropdown']</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210526 16:23:55.204" level="INFO">Clicking element 'xpath://a[@id='userDropdown']'.</msg>
+<status status="PASS" starttime="20210526 16:23:55.204" endtime="20210526 16:23:55.313"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:.dropdown-item:nth-child(1)</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210526 16:23:55.314" level="INFO">Clicking element 'css:.dropdown-item:nth-child(1)'.</msg>
+<status status="PASS" starttime="20210526 16:23:55.314" endtime="20210526 16:23:56.045"/>
+</kw>
+<tag>Regression</tag>
+<tag>Sanity</tag>
+<status status="PASS" starttime="20210526 16:23:55.203" endtime="20210526 16:23:56.046"/>
+</test>
+<test id="s1-s1-t4" name="[Teardown]">
+<kw name="ClosePage" library="LoginPortal">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210526 16:23:56.051" endtime="20210526 16:23:58.404"/>
+</kw>
+<status status="PASS" starttime="20210526 16:23:56.050" endtime="20210526 16:23:58.405"/>
+</kw>
+<tag>Regression</tag>
+<tag>Sanity</tag>
+<status status="PASS" starttime="20210526 16:23:56.048" endtime="20210526 16:23:58.408"/>
+</test>
+<doc>Login to vmsdev</doc>
+<status status="FAIL" starttime="20210526 16:23:45.878" endtime="20210526 16:23:58.418"/>
+</suite>
+<suite id="s1-s2" name="Testfile1" source="E:\Anania\INNOVATILY\vmsdevautomation\Tests\testfile1.robot">
+<test id="s1-s2-t1" name="varaibleandlist">
+<kw name="Set Variable" library="BuiltIn">
+<var>${var1}</var>
+<arg>variabaletest</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210526 16:23:58.438" level="INFO">${var1} = variabaletest</msg>
+<status status="PASS" starttime="20210526 16:23:58.437" endtime="20210526 16:23:58.438"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210526 16:23:58.438" endtime="20210526 16:23:58.439"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{list1}</var>
+<arg>item1</arg>
+<arg>1</arg>
+<arg>2</arg>
+<arg>item4</arg>
+<arg>item5</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20210526 16:23:58.440" level="INFO">@{list1} = [ item1 | 1 | 2 | item4 | item5 ]</msg>
+<status status="PASS" starttime="20210526 16:23:58.439" endtime="20210526 16:23:58.440"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${list1_length}</var>
+<arg>${list1}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20210526 16:23:58.441" level="INFO">Length is 5</msg>
+<msg timestamp="20210526 16:23:58.441" level="INFO">${list1_length} = 5</msg>
+<status status="PASS" starttime="20210526 16:23:58.440" endtime="20210526 16:23:58.441"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list1_length}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210526 16:23:58.441" endtime="20210526 16:23:58.442"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${list1_item}</var>
+<arg>${list1}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20210526 16:23:58.443" level="INFO">${list1_item} = item1</msg>
+<status status="PASS" starttime="20210526 16:23:58.442" endtime="20210526 16:23:58.443"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list1_item}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210526 16:23:58.443" endtime="20210526 16:23:58.444"/>
+</kw>
+<for flavor="IN">
+<var>${item}</var>
+<value>${list1}</value>
+<iter>
+<var name="${item}">['item1', '1', '2', 'item4', 'item5']</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${item}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210526 16:23:58.445" endtime="20210526 16:23:58.445"/>
+</kw>
+<status status="PASS" starttime="20210526 16:23:58.444" endtime="20210526 16:23:58.445"/>
+</iter>
+<status status="PASS" starttime="20210526 16:23:58.444" endtime="20210526 16:23:58.445"/>
+</for>
+<tag>Regression</tag>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20210526 16:23:58.436" endtime="20210526 16:23:58.446"/>
+</test>
+<test id="s1-s2-t2" name="keywordtest">
+<kw name="Set Variable" library="BuiltIn">
+<var>${keywt}</var>
+<arg>log to console</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210526 16:23:58.448" level="INFO">${keywt} = log to console</msg>
+<status status="PASS" starttime="20210526 16:23:58.448" endtime="20210526 16:23:58.448"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keywt}</arg>
+<arg>this is what will be printed</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>this is what will be printed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210526 16:23:58.449" endtime="20210526 16:23:58.450"/>
+</kw>
+<status status="PASS" starttime="20210526 16:23:58.449" endtime="20210526 16:23:58.450"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${keyvalue}</var>
+<arg>YES</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210526 16:23:58.451" level="INFO">${keyvalue} = YES</msg>
+<status status="PASS" starttime="20210526 16:23:58.450" endtime="20210526 16:23:58.451"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${keyvalue}'=='YES'</arg>
+<arg>log to console</arg>
+<arg>vlaue found</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>vlaue found</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210526 16:23:58.452" endtime="20210526 16:23:58.453"/>
+</kw>
+<status status="PASS" starttime="20210526 16:23:58.452" endtime="20210526 16:23:58.453"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${keyvalue}'=='NO'</arg>
+<arg>log to console</arg>
+<arg>vlaue not found</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20210526 16:23:58.453" endtime="20210526 16:23:58.454"/>
+</kw>
+<tag>Regression</tag>
+<tag>Sanity</tag>
+<status status="PASS" starttime="20210526 16:23:58.447" endtime="20210526 16:23:58.454"/>
+</test>
+<test id="s1-s2-t3" name="TimeoutAndSpeed">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210526 16:23:58.457" endtime="20210526 16:23:58.457"/>
+</kw>
+<tag>Regression</tag>
+<tag>Sanity</tag>
+<status status="PASS" starttime="20210526 16:23:58.456" endtime="20210526 16:23:58.458"/>
+</test>
+<doc>Learn RobotFrameWork</doc>
+<status status="PASS" starttime="20210526 16:23:58.424" endtime="20210526 16:23:58.461"/>
+</suite>
+<kw name="AfterEachTestSuite" type="TEARDOWN">
+<kw name="Log To Console" library="BuiltIn">
+<arg>After</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210526 16:23:58.465" endtime="20210526 16:23:58.465"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>After End</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210526 16:23:58.466" level="INFO">After End</msg>
+<status status="PASS" starttime="20210526 16:23:58.466" endtime="20210526 16:23:58.466"/>
+</kw>
+<status status="PASS" starttime="20210526 16:23:58.465" endtime="20210526 16:23:58.466"/>
+</kw>
+<status status="FAIL" starttime="20210526 16:23:45.580" endtime="20210526 16:23:58.466"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="6" fail="1" skip="0">Regression</stat>
+<stat pass="4" fail="1" skip="0">Sanity</stat>
+<stat pass="2" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="6" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="3" fail="1" skip="0" id="s1-s1" name="LoginPortal">Tests.LoginPortal</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="Testfile1">Tests.Testfile1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
